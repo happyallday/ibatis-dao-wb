@@ -2,7 +2,6 @@ package com.wb.ibatis.dao.client.template;
 
 import java.sql.Connection;
 
-import com.ibatis.dao.engine.transaction.ConnectionDaoTransaction;
 import com.wb.ibatis.dao.client.DaoException;
 import com.wb.ibatis.dao.client.DaoManager;
 import com.wb.ibatis.dao.client.DaoTransaction;
@@ -20,7 +19,7 @@ import com.wb.ibatis.dao.client.DaoTransaction;
 public abstract class JdbcDaoTemplate extends DaoTemplate {
 
 	/**
-	 * 管理这个Dao实例的DaoManager作为参数
+	 * 管理这个Dao实例的DaoManager对象作为参数
 	 * @param daoManager
 	 */
 	public JdbcDaoTemplate(DaoManager daoManager) {
@@ -28,7 +27,7 @@ public abstract class JdbcDaoTemplate extends DaoTemplate {
 	}
 	
 	/**
-	 * 获得JDBC连接对象，从当前dao实例运行的Dao事务中获取。
+	 * 获得JDBC连接对象，从当前dao实例运行的Dao事务对象中获取。
 	 * @return
 	 */
 	protected Connection getConnection() {
