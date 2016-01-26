@@ -3,6 +3,8 @@ package com.wb.ibatis.dao.client;
 import java.io.Reader;
 import java.util.Properties;
 
+import com.wb.ibatis.dao.engine.builder.xml.XmlDaoManagerBuilder;
+
 /**
  * @author www
  * @date 2016年1月9日
@@ -26,9 +28,9 @@ public class DaoManagerBuilder {
 	 * @return
 	 * @throws DaoException
 	 */
-	public static DaoManager buildDaoManager(Reader reader, Properties props)
+	public static DaoManager buildDaoManager(Reader reader, Properties properties)
 		throws DaoException {
-		
+		return new XmlDaoManagerBuilder().buildDaoManager(reader, properties);
 	}
 	
 	/**
@@ -37,6 +39,6 @@ public class DaoManagerBuilder {
 	 * @return
 	 */
 	public static DaoManager buildDaoManager(Reader reader) {
-		
+		return new XmlDaoManagerBuilder().buildDaoManager(reader);
 	}
 }

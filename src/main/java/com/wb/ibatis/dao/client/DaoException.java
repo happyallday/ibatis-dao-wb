@@ -7,8 +7,10 @@ package com.wb.ibatis.dao.client;
  * 定义DAO框架会抛出的异常。
  */
 
-@SuppressWarnings("serial")
 public class DaoException extends RuntimeException {
+
+	private static final long serialVersionUID = 6733202499493162252L;
+
 
 	public DaoException() {
 		

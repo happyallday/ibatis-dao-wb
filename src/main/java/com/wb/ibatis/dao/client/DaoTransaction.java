@@ -8,5 +8,9 @@ package com.wb.ibatis.dao.client;
  */
 
 public interface DaoTransaction {
+	
+	public void commit();
+	
+	public void rollback();
 
 }

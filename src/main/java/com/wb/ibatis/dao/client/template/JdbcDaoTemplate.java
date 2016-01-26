@@ -5,6 +5,7 @@ import java.sql.Connection;
 import com.wb.ibatis.dao.client.DaoException;
 import com.wb.ibatis.dao.client.DaoManager;
 import com.wb.ibatis.dao.client.DaoTransaction;
+import com.wb.ibatis.dao.engine.transaction.ConnectionDaoTransaction;
 
 /**
  * @author www
@@ -37,7 +38,7 @@ public abstract class JdbcDaoTemplate extends DaoTemplate {
 			          " cannot supply a JDBC Connection for this template, and is therefore not" +
 			          "supported by JdbcDaoTemplate.");
 		}
-		return ((ConnectionDaoTransaction) trans).getConnection();
+		return ((ConnectionDaoTransaction) transaction).getConnection();
 	}
 
 }
