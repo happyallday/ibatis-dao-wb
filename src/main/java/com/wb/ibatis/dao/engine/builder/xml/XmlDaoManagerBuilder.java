@@ -253,7 +253,7 @@ public class XmlDaoManagerBuilder {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			// 指定此工厂生成的解析器将提供对XML名称工具的支持
 			factory.setNamespaceAware(false);
-			// 开启验证属性
+			// 开启验证属性，开启此属性会验证XML文档是否符合DTD
 			factory.setValidating(true);
 			// 指定此工厂生成的解析器将忽略注释
 			factory.setIgnoringComments(true);
